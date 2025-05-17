@@ -1,0 +1,171 @@
+﻿<Page x:Class="School_Project.User"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:School_Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1305"
+      Title="User" Background="#c4f2f2">
+    <Page.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <TextBlock Text="{Binding Mode=OneWay}" TextWrapping="Wrap"  TextAlignment="Center"/>
+        </DataTemplate>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="ContentTemplate" Value="{StaticResource HeaderTemplate}"/>
+        </Style>
+
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border CornerRadius="6" TextBlock.Foreground="White">
+                <Border.Background>
+                    <SolidColorBrush Color="#0097a9"/>
+                </Border.Background>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana"></TextBlock>
+            </Border>
+        </ControlTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <StackPanel>
+            <DataGrid x:Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="False" RowHeight="30" TextBlock.TextAlignment="Center" VerticalContentAlignment="Center">
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="Дата" Binding="{Binding Дата}" Width="69" FontWeight="Bold"></DataGridTextColumn>
+                    <DataGridTextColumn Header="MCH" Binding="{Binding MCH}" Width="32"></DataGridTextColumn>
+                    <DataGridTextColumn Header="MCHC" Binding="{Binding MCHC}" Width="41"></DataGridTextColumn>
+                    <DataGridTextColumn Header="MCV" Binding="{Binding MCV}" Width="31"></DataGridTextColumn>
+                    <DataGridTextColumn Header="RDW" Binding="{Binding RDW}" Width="33"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Базофилы(абс.)" Binding="{Binding Базофилыабс}" Width="60"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Базофилы(отн.)" Binding="{Binding Баззофилыотн}" Width="60"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Гематокрит" Binding="{Binding Гематокрит}" Width="69"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Гемоглобин" Binding="{Binding Гемоглобин}" Width="72"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Лейкоциты" Binding="{Binding Лейкоциты}" Width="66"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Лимфоциты(абс.)" Binding="{Binding Лимфоцитыабс}" Width="71"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Лимфоциты(отн.)" Binding="{Binding Лимфоцитыотн}" Width="72"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Моноциты(абс.)" Binding="{Binding Моноцитыабс}" Width="65"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Моноциты(отн.)" Binding="{Binding Моноцитыотн}" Width="65"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Нейтрофилы(абс.)" Binding="{Binding Нейтрофилыабс}" Width="75"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Нейтрофилы(отн.)" Binding="{Binding Нейтрофилыотн}" Width="75"></DataGridTextColumn>
+                    <DataGridTextColumn Header="СОЭ" Binding="{Binding СОЭ}" Width="28"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Тромбоциты" Binding="{Binding Тромбоциты}" Width="75"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Эозинофилы(абс.)" Binding="{Binding Эозинофилыабс}" Width="75"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Эозинофилы(отн.)" Binding="{Binding Эозинофилыотн}" Width="75"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Эритроциты" Binding="{Binding Эритроциты}" Width="74"></DataGridTextColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Margin="0, 50, 0, 0">
+            <StackPanel Orientation="Horizontal" Width="1305">
+                <StackPanel Width="652" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Button Margin="50, 0, 0, 0" Height="30" x:Name="Return" Click="Return_Click" Width="Auto" BorderThickness="0" FontSize="17" FontWeight="DemiBold" Content="На главную">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="#c4f2f2"/>
+                                    <Setter Property="Foreground" Value="#0097a9"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#c4f2f2"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                        <Button Height="30" Name="AddButton" Click="Add_Click" Margin="330, 0, 0, 0" Width="Auto" BorderThickness="0" FontSize="17" FontWeight="DemiBold" Content="Сохранить изменения">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="#c4f2f2"/>
+                                    <Setter Property="Foreground" Value="#0097a9"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#c4f2f2"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button Click="Delete_Click" Margin="20, 0, 0, 0" Width="Auto" BorderThickness="0" FontSize="17" FontWeight="DemiBold" Content="Удалить">
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="Background" Value="#c4f2f2"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#c4f2f2"/>
+                                            <Setter Property="Foreground" Value="#696e6e"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Grid Width="140" Height="50">
+                    <TextBox  Text="ГРАФИК:" TextAlignment="Center" FontSize="19" FontWeight="Bold"/>
+
+                    <ComboBox x:Name="GraphComboBox" SelectionChanged="GraphComboBox_SelectionChanged" FontSize="15" VerticalAlignment="Bottom" Height="25"/>
+                </Grid>
+                    <Button x:Name="Graph" BorderThickness="0" Margin="20, 0, 0, 0" Height="40" Width="150" Click="Graph_Click" FontSize="25" Foreground="White" FontWeight="DemiBold" Content="Построить">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#0097a9"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#6bc9c9"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+            </StackPanel>
+        </StackPanel>
+        </StackPanel>
+            
+        
+    </Grid>
+</Page>

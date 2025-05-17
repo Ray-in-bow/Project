@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Datainfo">
+    <Key>
+      <PropertyRef Name="Indicator" />
+    </Key>
+    <Property Name="Indicator" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="MCH" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MCHC" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MCV" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RDW" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Базофилыабс" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Базофилыотн" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Лейкоциты" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Лимфоцитыабс" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Лимфоцитыотн" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Гематокрит" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Гемоглобин" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Моноцитыабс" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Моноцитыотн" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Тромбоцитыабс" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Тромбоцитыотн" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Нейтрофилыабс" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Нейтрофилыотн" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="СОЭ" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Эозинофилыабс" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Эозинофилыотн" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Эритроциты" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Indicators">
+    <Key>
+      <PropertyRef Name="Indicator" />
+    </Key>
+    <Property Name="Indicator" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="C1д_2дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C1д_2дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2д_3дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2д_3дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3д_4дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3д_4дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4д_5дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4д_5дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5д_14дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5д_14дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C14д_15дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C14д_15дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15д_4нЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15д_4нМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4н_4_3нЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4н_4_3нМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4_3н_8_6нЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4_3н_8_6нМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C8_6н_4мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C8_6н_4мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4м_6мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4м_6мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C6м_9мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C6м_9мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C9м_12мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C9м_12мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12м_2гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12м_2гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2л_3гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2л_3гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3г_4гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3г_4гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4г_5лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4г_5лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5л_6лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5л_6лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C6л_7л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C7л_9л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C9л_10л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C10л_11л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C11л_12л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12л_15лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12л_15лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15л_16лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15л_16лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C16л_18лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C16л_18лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C18л_21гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C18л_21гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C21г_45лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C21г_45лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C45л_50лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C45л_50лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C50л_65лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C50л_65лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C65л_120лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C65л_120лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="Дата" />
+    </Key>
+    <Property Name="Дата" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MCH" Type="Single" />
+    <Property Name="MCHC" Type="Single" />
+    <Property Name="MCV" Type="Single" />
+    <Property Name="RDW" Type="Single" />
+    <Property Name="Базофилыабс" Type="Single" />
+    <Property Name="Баззофилыотн" Type="Single" />
+    <Property Name="Гематокрит" Type="Single" />
+    <Property Name="Гемоглобин" Type="Single" />
+    <Property Name="Лейкоциты" Type="Single" />
+    <Property Name="Лимфоцитыабс" Type="Single" />
+    <Property Name="Лимфоцитыотн" Type="Single" />
+    <Property Name="Моноцитыабс" Type="Single" />
+    <Property Name="Моноцитыотн" Type="Single" />
+    <Property Name="Нейтрофилыабс" Type="Single" />
+    <Property Name="Нейтрофилыотн" Type="Single" />
+    <Property Name="СОЭ" Type="Single" />
+    <Property Name="Тромбоциты" Type="Single" />
+    <Property Name="Эозинофилыабс" Type="Single" />
+    <Property Name="Эозинофилыотн" Type="Single" />
+    <Property Name="Эритроциты" Type="Single" />
+  </EntityType>
+  <EntityContainer Name="DbaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Datainfo" EntityType="Self.Datainfo" />
+    <EntitySet Name="Indicators" EntityType="Self.Indicators" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" />
+  </EntityContainer>
+</Schema>

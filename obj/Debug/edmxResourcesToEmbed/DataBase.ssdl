@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище DatabaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Indicators">
+    <Key>
+      <PropertyRef Name="Indicator" />
+    </Key>
+    <Property Name="Indicator" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="1д-2дЖ" Type="nchar" MaxLength="10" />
+    <Property Name="1д-2дМ" Type="nchar" MaxLength="10" />
+    <Property Name="2д-3дЖ" Type="nchar" MaxLength="10" />
+    <Property Name="2д-3дМ" Type="nchar" MaxLength="10" />
+    <Property Name="3д-4дЖ" Type="nchar" MaxLength="10" />
+    <Property Name="3д-4дМ" Type="nchar" MaxLength="10" />
+    <Property Name="4д-5дЖ" Type="nchar" MaxLength="10" />
+    <Property Name="4д-5дМ" Type="nchar" MaxLength="10" />
+    <Property Name="5д-14дЖ" Type="nchar" MaxLength="10" />
+    <Property Name="5д-14дМ" Type="nchar" MaxLength="10" />
+    <Property Name="14д-15дЖ" Type="nchar" MaxLength="10" />
+    <Property Name="14д-15дМ" Type="nchar" MaxLength="10" />
+    <Property Name="15д-4нЖ" Type="nchar" MaxLength="10" />
+    <Property Name="15д-4нМ" Type="nchar" MaxLength="10" />
+    <Property Name="4н-4.3нЖ" Type="nchar" MaxLength="10" />
+    <Property Name="4н-4.3нМ" Type="nchar" MaxLength="10" />
+    <Property Name="4.3н-8.6нЖ" Type="nchar" MaxLength="10" />
+    <Property Name="4.3н-8.6нМ" Type="nchar" MaxLength="10" />
+    <Property Name="8.6н-4мЖ" Type="nchar" MaxLength="10" />
+    <Property Name="8.6н-4мМ" Type="nchar" MaxLength="10" />
+    <Property Name="4м-6мЖ" Type="nchar" MaxLength="10" />
+    <Property Name="4м-6мМ" Type="nchar" MaxLength="10" />
+    <Property Name="6м-9мЖ" Type="nchar" MaxLength="10" />
+    <Property Name="6м-9мМ" Type="nchar" MaxLength="10" />
+    <Property Name="9м-12мЖ" Type="nchar" MaxLength="10" />
+    <Property Name="9м-12мМ" Type="nchar" MaxLength="10" />
+    <Property Name="12м-2гЖ" Type="nchar" MaxLength="10" />
+    <Property Name="12м-2гМ" Type="nchar" MaxLength="10" />
+    <Property Name="2л-3гЖ" Type="nchar" MaxLength="10" />
+    <Property Name="2л-3гМ" Type="nchar" MaxLength="10" />
+    <Property Name="3г-4гЖ" Type="nchar" MaxLength="10" />
+    <Property Name="3г-4гМ" Type="nchar" MaxLength="10" />
+    <Property Name="4г-5лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="4г-5лМ" Type="nchar" MaxLength="10" />
+    <Property Name="5л-6лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="5л-6лМ" Type="nchar" MaxLength="10" />
+    <Property Name="6л-7л" Type="nchar" MaxLength="10" />
+    <Property Name="7л-9л" Type="nchar" MaxLength="10" />
+    <Property Name="9л-10л" Type="nchar" MaxLength="10" />
+    <Property Name="10л-11л" Type="nchar" MaxLength="10" />
+    <Property Name="11л-12л" Type="nchar" MaxLength="10" />
+    <Property Name="12л-15лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="12л-15лМ" Type="nchar" MaxLength="10" />
+    <Property Name="15л-16лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="15л-16лМ" Type="nchar" MaxLength="10" />
+    <Property Name="16л-18лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="16л-18лМ" Type="nchar" MaxLength="10" />
+    <Property Name="18л-21гЖ" Type="nchar" MaxLength="10" />
+    <Property Name="18л-21гМ" Type="nchar" MaxLength="10" />
+    <Property Name="21г-45лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="21г-45лМ" Type="nchar" MaxLength="10" />
+    <Property Name="45л-50лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="45л-50лМ" Type="nchar" MaxLength="10" />
+    <Property Name="50л-65лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="50л-65лМ" Type="nchar" MaxLength="10" />
+    <Property Name="65л-120лЖ" Type="nchar" MaxLength="10" />
+    <Property Name="65л-120лМ" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Months">
+    <Key>
+      <PropertyRef Name="Indicator" />
+    </Key>
+    <Property Name="Indicator" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Январь" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Февраль" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="Март" Type="nchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище DatabaseModelContainer">
+    <EntitySet Name="Indicators" EntityType="Self.Indicators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Months" EntityType="Self.Months" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

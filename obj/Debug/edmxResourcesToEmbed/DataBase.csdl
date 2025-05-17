@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Indicators">
+    <Key>
+      <PropertyRef Name="Indicator" />
+    </Key>
+    <Property Name="Indicator" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="C1д_2дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C1д_2дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2д_3дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2д_3дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3д_4дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3д_4дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4д_5дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4д_5дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5д_14дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5д_14дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C14д_15дЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C14д_15дМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15д_4нЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15д_4нМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4н_4_3нЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4н_4_3нМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4_3н_8_6нЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4_3н_8_6нМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C8_6н_4мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C8_6н_4мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4м_6мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4м_6мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C6м_9мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C6м_9мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C9м_12мЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C9м_12мМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12м_2гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12м_2гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2л_3гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C2л_3гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3г_4гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C3г_4гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4г_5лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C4г_5лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5л_6лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C5л_6лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C6л_7л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C7л_9л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C9л_10л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C10л_11л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C11л_12л" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12л_15лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C12л_15лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15л_16лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C15л_16лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C16л_18лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C16л_18лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C18л_21гЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C18л_21гМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C21г_45лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C21г_45лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C45л_50лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C45л_50лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C50л_65лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C50л_65лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C65л_120лЖ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="C65л_120лМ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Months">
+    <Key>
+      <PropertyRef Name="Indicator" />
+    </Key>
+    <Property Name="Indicator" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Январь" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Февраль" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Март" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Indicators" EntityType="Self.Indicators" />
+    <EntitySet Name="Months" EntityType="Self.Months" />
+  </EntityContainer>
+</Schema>

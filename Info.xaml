@@ -1,0 +1,311 @@
+﻿<Page x:Class="School_Project.Info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:School_Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="Info" Background="#c4f2f2">
+    <Page.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border CornerRadius="6" TextBlock.Foreground="White">
+                <Border.Background>
+                    <SolidColorBrush Color="#0097a9"/>
+                </Border.Background>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana">Добавить</TextBlock>
+            </Border>
+            
+        </ControlTemplate>
+    </Page.Resources>
+
+    <StackPanel HorizontalAlignment="Center" Width="1000">
+        <StackPanel Orientation="Horizontal" Margin="0, 30" Width="800" Height="50">
+            <Button Height="30" x:Name="Return" Click="Return_Click" BorderThickness="0" FontSize="17" FontWeight="DemiBold" Content="На главную">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#c4f2f2"/>
+                        <Setter Property="Foreground" Value="#0097a9"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#c4f2f2"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Grid Width="100" Margin="100,0,0,0">
+                <TextBox  Text="Пол" TextAlignment="Center" FontSize="18" FontWeight="Bold"/>
+
+                <ComboBox x:Name="GenderComboBox" Background="#FF262626" SelectionChanged="GenderComboBox_SelectionChanged" FontSize="15" VerticalAlignment="Bottom" Height="25"/>
+            </Grid>
+
+            <Grid Width="200" Margin="100,0,0,0">
+                <TextBox Text="Возраст" TextAlignment="Center" FontSize="18" FontWeight="Bold"/>
+
+                <ComboBox x:Name="AgeComboBox" SelectionChanged="AgeComboBox_SelectionChanged" FontSize="15" VerticalAlignment="Bottom" Height="25"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="80, -20">
+            <StackPanel Width="200" Margin="0, 30">
+                <StackPanel>
+                    <Label x:Name="MCHLabel" Content="MCH:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="MCH_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="MCH" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="MCHButton" Template="{StaticResource ButtonTemplate}" Width="70" 
+                                Margin="5, 0" Click="MCHButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="MCHCLabel" Content="MCHC:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="MCHC_Click" Tag="kjkjkkkkk" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="MCHC" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="MCHCButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="MCHCButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="MCVLabel" Content="MCV:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="MCV_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="MCV" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="MCVButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="MCVButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="RDWLabel" Content="RDW:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="RDW_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="RDW" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="RDWButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="RDWButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="LeukocytesLabel" Content="ЛЕЙКОЦИТЫ:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="Leukocytes_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="Leukocytes" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="LeukocytesButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="LeukocytesButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Width="220" Margin="0, 30">
+                <StackPanel>
+                    <Label x:Name="BasophilsAbsLabel" Content="БАЗОФИЛЫ(абс.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="BasophilsAbs_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="BasophilsAbs" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="BasophilsAbsButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="BasophilsAbsButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="BasophilsRelLabel" Content="БАЗОФИЛЫ(отн.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="BasophilsRel_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="BasophilsRel" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="BasophilsRelButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="BasophilsRelButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="HematocritLabel" Content="ГЕМАТОКРИТ:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="Hematocrit_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="Hematocrit" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="HematocritButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="HematocritButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="HemoglobinLabel" Content="ГЕМОГЛОБИН:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="Hemoglobin_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="Hemoglobin" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="HemoglobinButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="HemoglobinButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="PlateletsLabel" Content="ТРОМБОЦИТЫ:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="Platelets_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="Platelets" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="PlateletsButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="PlateletsButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Width="220" Margin="0, 30">
+                <StackPanel>
+                    <Label x:Name="LymphocytesAbsLabel" Content="ЛИМФОЦИТЫ(абс.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="LymphocytesAbs_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="LymphocytesAbs" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="LymphocytesAbsButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="LymphocytesAbsButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="LymphocytesRelLabel" Content="ЛИМФОЦИТЫ(отн.)   :" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="LymphocytesRel_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="LymphocytesRel" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="LymphocytesRelButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="LymphocytesRelButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="MonocytesAbsLabel" Content="МОНОЦИТЫ(абс.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="MonocytesAbs_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="MonocytesAbs" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="MonocytesAbsButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="MonocytesAbsButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="MonocytesRelLabel" Content="МОНОЦИТЫ(отн.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="MonocytesRel_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="MonocytesRel" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="MonocytesRelButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="MonocytesRelButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="ESRLabel" Content="СОЭ:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="ESR_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="ESR" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="ESRButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="ESRButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Width="220" Margin="0, 30">
+                <StackPanel>
+                    <Label x:Name="NeutrophilsAbsLabel" Content="НЕЙТРОФИЛЫ(абс.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="NeutrophilsAbs_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="NeutrophilsAbs" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="NeutrophilsAbsButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="NeutrophilsAbsButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="NeutrophilsRelLabel" Content="НЕЙТРОФИЛЫ(отн.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="NeutrophilsRel_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="NeutrophilsRel" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="NeutrophilsRelButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="NeutrophilsRelButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="EosinophilsAbsLabel" Content="ЭОЗИНОФИЛЫ(абс.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="EosinophilsAbs_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="EosinophilsAbs" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="EosinophilsAbsButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="EosinophilsAbsButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="EosinophilsRelLabel" Content="ЭОЗИНОФИЛЫ(отн.):" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="EosinophilsRel_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="EosinophilsRel" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="EosinophilsRelButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="EosinophilsRelButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="0, 15">
+                    <Label x:Name="ErythrocytesLabel" Content="ЭРИТРОЦИТЫ:" FontWeight="Bold"/>
+                    <Grid HorizontalAlignment="Left" Margin="5, 0">
+                        <Button Content="● ● ●" VerticalAlignment="Bottom" FontSize="9" Foreground="#696969" 
+                                Click="Erythrocytes_Click" BorderThickness="0" Background="#c4f2f2"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5, 8" Height="20">
+                        <TextBox x:Name="Erythrocytes" Width="50" HorizontalAlignment="Left"/>
+                        <Button x:Name="ErythrocytesButton" Width="70" Template="{StaticResource ButtonTemplate}" Margin="5, 0" Click="ErythrocytesButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Page>
